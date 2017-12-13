@@ -1,0 +1,84 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	color: #333;
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	font-size: 18px; }
+
+	body {
+		margin: 80px 0; }
+
+
+		.container {
+			width: 800px;
+			margin: 0 auto;
+		}
+
+
+		input {
+			font-size: 18px;
+			box-sizing : border-box;
+			width: 100%;
+			padding: 10px;
+			border-radius: 4px;
+			border: 1px solid #E2E9F1;
+			display: block;
+		}
+
+		input:focus {
+			outline: none;
+		}
+
+
+		label {
+			display: block;
+			color: #B9C5DB;
+			margin: 0 0 10px 0;
+		}
+
+		.row {
+			margin: 10px;
+		}
+
+		.submit {
+			font-size: 18px;
+			border-radius: 0;
+			border: none;
+			color: #fff;
+			padding: 10px;
+			background-color: #2EDAA7;
+		}
+
+		#result div p {
+			color: #B0B5D3;
+		}
+
+		#result div {
+			margin: 10px 0;
+			border-radius: 4px;
+			padding: 20px;
+			background-color: #F7FAFF;
+		}
+
+		.done {
+			padding: 20px;
+			border-top: 1px dashed #DBE1ED;
+			display: none;
+		}
+
+		.done .wallet_address {
+			margin-top: 5px;
+		}
+
+		@media screen and (max-width: 520px) {
+
+			.done .wallet_address {
+				font-size: 14px;
+			}
+
+			.container {
+				width: 90%;
+			}
+
+		}

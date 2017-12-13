@@ -18,22 +18,24 @@ $( document ).ready(function() {
 			var increase = newNumber - originalNumber
 			var increasePercentage = increase / originalNumber * 100;
 
-			resultDiv += '<div>This is an increase of '+increase+'</div>';
-			resultDiv += '<div>an increase of '+parseFloat(increasePercentage).toFixed(2)+'%</div>';
+			resultDiv += '<div><strong>This is an increase of '+increase+'</strong></div>';
+			resultDiv += '<div><p>Or, as a percentage (rounded to two decimal places):</p><strong>an increase of '+parseFloat(increasePercentage).toFixed(2)+'%</strong></div>';
 
 		} else if (originalNumber > newNumber){
 
 			var increase = newNumber - originalNumber
 			var increasePercentage = increase / originalNumber * 100;
 
-			resultDiv += '<div>This is a decrease of '+increase+'</div>';
-			resultDiv += '<div>a decrease of '+parseFloat(increasePercentage).toFixed(2)+'%</div>';
+			resultDiv += '<div><strong>This is a decrease of '+increase+'</strong></div>';
+			resultDiv += '<div><p>Or, as a percentage (rounded to two decimal places):</p><strong>a decrease of '+parseFloat(increasePercentage).toFixed(2)+'%</strong></div>';
 
 		} else {
-			resultDiv += '<div>The two numbers are the same</div>';
-			resultDiv += '<div>an increase of 0%</div>';
+			resultDiv += '<div><strong>The two numbers are the same</strong></div>';
+			resultDiv += '<div><p>Or, as a percentage (rounded to two decimal places):</p><strong>an increase of 0%</strong></div>';
 
 		}
+
+		$('.done').fadeIn();
 
 		$('#result').html(resultDiv);
 

@@ -1,24 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link href="style/main.css" rel="stylesheet" type="text/css">
 	<title>Percentage Change - Percentage Increase and Decrease | pureSnippets at GitHub.com</title>
 </head>
 <body>
 
-	<h1>Use this calculator to work out the percentage change of two numbers</h1>
+	<div class="container">
 
-	<form method="post" id="mainForm">
-		<label for="new_number">
-			New Number
-			<input type="text" name="new_number">
-		</label>
-		<label for="original_number">
-			Original Number
-			<input type="text" name="original_number">
-		</label>
-		<input type="submit" value="Submit">
-	</form>
-	<div id="result">
+		<h1>Use this calculator to work out the percentage change of two numbers</h1>
+
+		<form method="post" id="mainForm">
+
+			<div class="row">
+				<label for="new_number">New Number</label>
+				<input id="new_number" type="number" name="new_number" autocomplete="off">
+			</div>
+			<div class="row">
+				<label for="original_number">Original Number</label>
+				<input id="original_number" type="number" name="original_number" autocomplete="off">
+			</div>
+			<div class="row">
+				<input class="submit" type="submit" value="Submit">
+			</div>
+		</form>
+		<div class="row">
+			<div id="result"></div>
+		</div>
+
+		<div class="row">
+
+			<div class="done">
+
+				<div class="wallet_address">
+					Donate BTC: <strong>1HchPG8ixgTt6eKNteY9TSkpr6ENMFRXBs</strong>
+				</div>
+				<div class="wallet_address">
+					Donate ETH: <strong>0xF3267f249473cE4c568696d997FF40A97Fe7D330</strong>
+				</div>
+				<div class="wallet_address">
+					Donate LTC: <strong>LT5NLdomoBKqHhVg4YwaSFwkTAHuwsYxcZ</strong>
+				</div>
+
+			</div>
+
+		</div>
+
 
 	</div>
 

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tesing online</title>
+</head>
+<body>
+
+	<form method="post" id="mainForm">
+		<label for="new_number">
+			New Number
+			<input type="text" name="new_number">
+		</label>
+		<label for="original_number">
+			Original Number
+			<input type="text" name="original_number">
+		</label>
+		<input type="submit" value="Submit">
+	</form>
+	<div id="result">
+
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		
+		$( document ).ready(function() {
+			$('#mainForm').on('submit', function(e) {
+
+				e.preventDefault();
+				var data = $(this).serializeArray();
+
+				var values = {};
+				$.each($(this).serializeArray(), function(i, field) {
+					values[field.name] = field.value;
+				});
+
+
+				var newNumber = values.new_number;
+				var originalNumber = values.original_number;
+
+				var increase = newNumber - originalNumber
+
+				var resultDiv = '';
+
+				var increasePercentage = increase / originalNumber * 100;
+
+				resultDiv += '<div>This is an increase of '+increase+'</div>';
+				resultDiv += '<div>an increase of '+parseFloat(increasePercentage).toFixed(2)+'%</div>';
+
+				$('#result').html(resultDiv);
+
+
+			});
+
+		});
+
+	</script>
+
+</body>
+</html>

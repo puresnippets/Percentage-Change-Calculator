@@ -10,8 +10,8 @@ $( document ).ready(function() {
 		});
 
 		var resultDiv = '';
-		var newNumber = values.new_number;
-		var originalNumber = values.original_number;
+		var newNumber = parseInt(values.new_number);
+		var originalNumber = parseInt(values.original_number);
 
 		if(newNumber > originalNumber){
 
